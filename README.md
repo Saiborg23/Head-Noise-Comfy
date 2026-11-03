@@ -153,8 +153,8 @@ For a single process instead of Vite: `npm --prefix app run build`, then the bac
 
 ### The demo track
 
-The bundled TRIBE run was made from *In Your Head (RL Grime edit)*. The audio is copyrighted and is **not** in the
-repo. To hear the demo as intended, put that track at `app/public/data/in-your-head-rl-grime-edit.m4a`. Any other
+The bundled TRIBE run was made from a 38 s cut of SFRNG's *In My Head* (1:46 to 2:24). The audio is copyrighted and
+is **not** in the repo. To hear the demo as intended, put that cut at `app/public/data/sfrng-in-my-head.m4a`. Any other
 track works too; it plays over the same cached run. **load demo** fills in the demo face
 (`app/public/data/demo-face.jpg`, a StyleGAN2 face of a person who does not exist).
 
