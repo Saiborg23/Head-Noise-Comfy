@@ -1,0 +1,30 @@
+# environments and builds
+.venv/
+node_modules/
+app/dist/
+app/.vite/
+__pycache__/
+*.pyc
+.DS_Store
+
+# runtime state
+comfy/runs/
+comfy/.proxy-state/
+/data/
+
+# never published: copyrighted audio and private head data
+*.m4a
+*.mp3
+*.wav
+*.flac
+app/public/data/local/
+comfy/test_face.png
+
+# work in progress kept outside the repo
+app/public/demo/
+app/demo.html
+app/explain.html
+app/src/demo.*
+app/src/explain.*
+
+.env

@@ -1,0 +1,24 @@
+schema: comfy-build/1
+id: null
+name: head-noise
+description: "Head Noise: TRIBE v2 brain predictions + Hunyuan3D 2.1 face-to-head mesh, open weights only."
+syncedRevision: null
+definition:
+  schema: distribution-definition/0
+  # The core commit the workflows were tested on locally (ComfyUI 0.40.0, Oct 13 2026).
+  baseComfyVersion: e0a32bce84f4603f2b61b16b50f8958e68fd6171
+  models:
+    - type: checkpoints
+      filename: hunyuan_3d_v2.1.safetensors
+      sourceUri: https://huggingface.co/Comfy-Org/hunyuan3D_2.1_repackaged/resolve/main/hunyuan_3d_v2.1.safetensors
+      sha256: 5f21e98a6cb99b13b5e224abaee33929570fff7af2b6a0060001559a04ba9d72
+    - type: background_removal
+      filename: birefnet.safetensors
+      sourceUri: https://huggingface.co/Comfy-Org/BiRefNet/resolve/main/background_removal/birefnet.safetensors
+      sha256: 9ab37426bf4de0567af6b5d21b16151357149139362e6e8992021b8ce356a154
+  customNodes:
+    - name: comfyui-head-noise
+      source: local
+      localPath: comfyui-head-noise
+  modelPolicy: {mode: allowlist, list: ["hunyuan_3d_v2.1.safetensors", "birefnet.safetensors"]}
+  partnerNodePolicy: {mode: allowlist, list: []}

@@ -1,0 +1,9 @@
+[project]
+name = "comfyui-head-noise"
+version = "0.1.0"
+description = "Head Noise: TRIBE v2 brain predictions and head-mesh export for the Head Noise visualizer."
+license = { text = "MIT" }
+dependencies = []
+
+[tool.comfy]
+DisplayName = "Head Noise"

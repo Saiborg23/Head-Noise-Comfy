@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Head Noise</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <aside id="panel">
+      <header class="brand">
+        <h1>HEAD NOISE</h1>
+        <p class="dim">track + face in, predicted cortex out of the top of your head</p>
+      </header>
+
+      <section>
+        <div class="label"><span class="num">01</span> AUDIO</div>
+        <label class="drop" id="drop-audio">
+          <input type="file" accept="audio/*" hidden />
+          <span class="drop-main">drop a track or click</span>
+          <span class="drop-sub dim" data-role="status">wav, mp3, m4a, flac</span>
+        </label>
+      </section>
+
+      <section>
+        <div class="label"><span class="num">02</span> FACE</div>
+        <label class="drop drop-face" id="drop-face">
+          <input type="file" accept="image/*" hidden />
+          <img alt="" hidden />
+          <span class="drop-main">drop a face photo</span>
+          <span class="drop-sub dim" data-role="status">front-facing, even light, optional</span>
+        </label>
+      </section>
+
+      <div class="row">
+        <button id="btn-demo" class="ghost">load demo</button>
+        <button id="btn-run" class="primary" disabled>RUN</button>
+      </div>
+
+      <section>
+        <div class="label">PIPELINE <span id="target"></span></div>
+        <ol id="steps">
+          <li data-step="decode"><span class="k">decode audio</span><span class="v dim">waiting</span></li>
+          <li data-step="dsp"><span class="k">dsp envelope</span><span class="v dim">waiting</span></li>
+          <li data-step="tribe"><span class="k">TRIBE v2</span><span class="v dim">waiting</span></li>
+          <li data-step="face"><span class="k">face to 3D</span><span class="v dim">waiting</span></li>
+          <li data-step="viewer"><span class="k">viewer</span><span class="v dim">waiting</span></li>
+        </ol>
+      </section>
+
+      <section>
+        <div class="label">SNIPPET</div>
+        <div class="row tight">
+          <label class="field">in <input id="in-start" value="0:12" spellcheck="false" /></label>
+          <label class="field">out <input id="in-end" value="1:08" spellcheck="false" /></label>
+          <label class="check"><input type="checkbox" id="in-loop" checked /> loop</label>
+        </div>
+      </section>
+
+      <section>
+        <div class="label">VIEW</div>
+        <label class="slider">cut height <input type="range" id="s-cut" min="232" max="334" step="1" value="292" /></label>
+        <label class="slider">brain lift <input type="range" id="s-lift" min="0" max="1" step="0.01" value="0.55" /></label>
+        <label class="slider">sparks <input type="range" id="s-sparks" min="0" max="1" step="0.01" value="0.6" /></label>
+        <label class="slider">bloom <input type="range" id="s-bloom" min="0" max="1.5" step="0.01" value="0.55" /></label>
+        <div class="row tight">
+          <label class="check"><input type="checkbox" id="c-auto" checked /> auto camera</label>
+          <label class="check"><input type="checkbox" id="c-hud" checked /> hud</label>
+        </div>
+      </section>
+
+      <section>
+        <div class="label">EXPORT</div>
+        <div class="seg" id="seg-frame">
+          <button data-v="16:9" class="on">16:9</button><button data-v="9:16">9:16</button><button data-v="1:1">1:1</button>
+        </div>
+        <div class="seg" id="seg-range">
+          <button data-v="snippet" class="on">snippet</button><button data-v="full">full track</button>
+        </div>
+        <button id="btn-rec" class="primary wide" disabled>RECORD</button>
+        <p id="rec-status" class="dim small">records in real time with audio, then offers the file</p>
+      </section>
+    </aside>
+
+    <main id="stage">
+      <div id="frame">
+        <canvas id="gl"></canvas>
+        <canvas id="hud"></canvas>
+      </div>
+      <footer id="transport">
+        <button id="btn-play" class="ghost" aria-label="play">PLAY</button>
+        <span id="clock" class="mono">0:00.0</span>
+        <canvas id="timeline"></canvas>
+      </footer>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

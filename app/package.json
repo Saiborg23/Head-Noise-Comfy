@@ -1,0 +1,18 @@
+{
+  "name": "head-noise-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Upload a track and a face, watch the predicted brain (TRIBE v2) react out of the cut-open head, export the visual.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.12"
+  }
+}

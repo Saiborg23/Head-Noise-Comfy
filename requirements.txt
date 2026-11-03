@@ -1,0 +1,10 @@
+# Backend + Comfy tooling (Python 3.10+)
+comfy-cli>=1.25
+comfy-sdk>=0.5
+comfy-api-proxy>=0.1.6
+fastapi
+uvicorn[standard]
+python-multipart
+# tools/export_data.py only
+numpy
+nilearn

@@ -1,0 +1,4 @@
+runs/
+.proxy-state/
+test_face.png
+__pycache__/

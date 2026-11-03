@@ -1,0 +1,24 @@
+{
+ "1": {
+  "class_type": "LoadAudio",
+  "inputs": {
+   "audio": "track.wav"
+  },
+  "_meta": {
+   "title": "Track"
+  }
+ },
+ "2": {
+  "class_type": "TribeV2Predict",
+  "inputs": {
+   "audio": [
+    "1",
+    0
+   ],
+   "pacing_seconds": 4.0
+  },
+  "_meta": {
+   "title": "TRIBE v2"
+  }
+ }
+}
