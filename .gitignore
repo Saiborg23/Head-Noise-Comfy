@@ -12,12 +12,13 @@ comfy/runs/
 comfy/.proxy-state/
 /data/
 
-# never published: copyrighted audio and private head data
+# never published: copyrighted audio and private head data (the NCS demo track is the exception)
 *.m4a
 *.mp3
 *.wav
 *.flac
 app/public/data/local/
+!app/public/data/sfrng-in-my-head.m4a
 comfy/test_face.png
 
 # work in progress kept outside the repo

@@ -83,8 +83,8 @@ function setFace(file) {
 setupDrop($('#drop-audio'), 'audio/', setAudio);
 setupDrop($('#drop-face'), 'image/', setFace);
 
-// The demo face is a synthetic portrait (bundled). The demo track is not: put the track the bundled TRIBE run was made
-// from at app/public/data/<meta.track.audio>; without it, any dropped track plays over the demo run.
+// The demo face (a synthetic portrait) and the demo track (an NCS release) are bundled; the track lives at
+// app/public/data/<meta.track.audio>. Without it, any dropped track plays over the demo run.
 async function loadDemo() {
   if (!state.faceFile) {
     const f = await fetch('/data/demo-face.jpg');
