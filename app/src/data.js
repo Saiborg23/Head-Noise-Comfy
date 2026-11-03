@@ -12,10 +12,10 @@ async function bin(name, Type) {
   return new Type(await r.arrayBuffer());
 }
 
-// The head: a private scan in data/local/ (not in the repo) when present, else the bundled Hunyuan3D head.glb.
-// `?head=default` forces the bundled one.
+// The head: the bundled Hunyuan3D head.glb (made from the demo face). `?head=scan` uses a private scan in
+// data/local/ instead, when one is there (not in the repo).
 async function loadHead(meta) {
-  const local = new URLSearchParams(location.search).get('head') !== 'default'
+  const local = new URLSearchParams(location.search).get('head') === 'scan'
     && (await fetch('/data/local/head_pts.f32', { method: 'HEAD' })).ok;
   if (local) {
     const [headPts, headVerts, headFaces] = await Promise.all([
