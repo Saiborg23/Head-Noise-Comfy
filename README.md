@@ -289,6 +289,8 @@ than ground truth.
 
 ## Credits and licences
 
+Head Noise's own code (the app, backend, node pack and tools) is released under the [MIT License](LICENSE). The models, data and media it uses keep their own licences:
+
 | Component | Licence |
 |---|---|
 | [TRIBE v2](https://github.com/facebookresearch/tribev2) (Meta FAIR), and the cached predictions derived from it | CC BY-NC 4.0 (non-commercial) |
