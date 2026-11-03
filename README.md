@@ -7,9 +7,9 @@ The heavy steps run as ComfyUI workflows driven by the [Comfy SDK](https://pypi.
 ComfyUI, a serverless deployment on the Comfy developer platform, or Comfy Cloud. Every model is open weights: no
 partner (API) nodes anywhere.
 
-[![Head Noise demo video: the generated head with the predicted cortex reacting out of the cut](docs/demo-poster.jpg)](docs/head-noise-demo.mp4)
+[![Head Noise demo video: the generated head with the predicted cortex reacting out of the cut](docs/demo-poster.jpg)](https://youtu.be/QWN8vGnLllk)
 
-*Demo video (1:33): [docs/head-noise-demo.mp4](docs/head-noise-demo.mp4). Recorded on the earlier demo track, G Jones' In Your Head (RL Grime Edit).*
+*Demo video (1:33): [watch on YouTube](https://youtu.be/QWN8vGnLllk) (a copy is in [docs/head-noise-demo.mp4](docs/head-noise-demo.mp4)). Recorded on the earlier demo track, G Jones' In Your Head (RL Grime Edit).*
 
 ---
 
